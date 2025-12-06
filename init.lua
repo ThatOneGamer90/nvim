@@ -54,6 +54,8 @@ require("blink.cmp").setup({
     keymap = {
         preset = "default",
         ["<CR>"] = { "accept", "fallback" }, -- 'Enter' accepts selected item
+        ["<Tab>"] = { "select_next", "fallback_to_mappings" },
+        ["<S-Tab>"] = { "select_prev", "fallback_to_mappings" },
     },
     completion = { documentation = { auto_show = true } },
     sources = {
