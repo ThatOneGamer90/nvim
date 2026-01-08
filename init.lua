@@ -36,8 +36,8 @@ require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls",
         "stylua",
-        -- "ty", -- use ty over pyrefly after full release
-        "pyrefly",
+        "ty", -- use ty over pyrefly after full/beta release
+        -- "pyrefly",
         "ruff",
         "clangd",
     },
@@ -45,7 +45,7 @@ require("mason-lspconfig").setup({
 
 vim.lsp.config("ruff", {
     on_attach = function(client, _)
-        client.server_capabilities.hoverProvider = false -- Disable ruff hover, use pyrefly
+        client.server_capabilities.hoverProvider = false -- Disable ruff hover, use pyrefly/ty
     end,
 })
 
